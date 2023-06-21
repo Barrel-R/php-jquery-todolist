@@ -10,13 +10,13 @@ class Connection
     
     public function connect() {
         try {
-            $conn = new PDO("mysql:host={$this->host};dbname={$this->dbName}", $this->username, $this->password);
+            $connection = new PDO("mysql:host={$this->host};dbname={$this->dbName}", $this->username, $this->password);
         
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
-            $conn->exec('SET NAMES utf8');
+            $connection->exec('SET NAMES utf8');
         
-            return $conn;
+            return $connection;
         } catch (PDOException $e) {
             die("Database connection failed: " . $e->getMessage());
     
