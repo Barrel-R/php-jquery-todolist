@@ -1,28 +1,28 @@
-# XNEO_crud
+# PHP & Jquery To-do List (CRUD)
 
-## Setup do Projeto:
+## Project Setup:
 
-Atualize as configurações do banco de dados em src/database/Connection.php:
+Update the database configuration at src/database/Connection.php:
 
-Exemplo:
+Example:
 ```
     private $host = 'localhost';
-    private $dbName = 'xneo_crud';
-    private $username = 'root';
-    private $password = '';
+    private $dbName = 'your_db_name';
+    private $username = 'your_username';
+    private $password = '123456';
 ```
 
-Execute a migration da tabela no terminal:
+Execute the migration file in the terminal:
 
 ```
 cd src/database
 php create_todo_table.php
 ```
 
-Navegue para o diretório 'src' e utilize este comando:
+Navigate to the 'src' directory and use this command:
 
 ```
 php -S localhost:8000
 ```
 
-Navegue para a url localhost:8000 no seu navegador para acessar o projeto!
+Navigate to the browser with the url: localhost:8000 to access the project!
